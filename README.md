@@ -13,7 +13,7 @@
 
 ## Installation
 
-1. Copy the _RDPTask_ folder from the _install_ folder into _CustomSpace_ in your Portal Web Files
+1. Copy the _RDPTask_ folder from the __install_ folder into _CustomSpace_ in your Portal Web Files
 2. If this is the first extention you have installed, copy the contents of _Script Loader.js_ to the top of _custom.js_ found in _CustomSpace_ folder
 3. Copy the contents of _Add to CustomJS.js_ to the bottom of _custom.js_ found in _CustomSpace_ folder
 4. Run the SQL script that is in the _install_ folder against the ServiceManagement database
