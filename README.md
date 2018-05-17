@@ -28,3 +28,7 @@ Please log issues on GitHub
 Pull requests are welcome
 
 The extention has a thread on the [Cireson Community](https://community.cireson.com/discussion/3935/portal-rdp-task/ "Cireson Community Page").
+
+## Contributers
+
+Patrick Chambers, Geoff Ross

@@ -4,7 +4,7 @@ app.custom.formTasks.add('Incident', null, function (formObj, viewModel) {
 		var vm = pageForm.viewModel;
 		//If the user is not an analyst, hide the task
 		if (!session.user.Analyst) { 
-			$( ".taskmenu li:contains('Launch RDP')" ).hide() 
+			$( ".taskmenu li:contains('Launch RDP')" ).hide();
 		} 
 	});
 	return;
@@ -13,7 +13,7 @@ app.custom.formTasks.add('Incident', null, function (formObj, viewModel) {
 // Add task for Incident
 app.custom.formTasks.add('Incident', "Launch RDP", function (formObj, viewModel) {
 
-    RDP()
+    RDP();
     
 });
 
@@ -23,7 +23,7 @@ app.custom.formTasks.add('ChangeRequest', null, function (formObj, viewModel) {
 		var vm = pageForm.viewModel;
 		//If the user is not an analyst, hide the task
 		if (!session.user.Analyst) { 
-			$( ".taskmenu li:contains('Launch RDP')" ).hide() 
+			$( ".taskmenu li:contains('Launch RDP')" ).hide() ;
 		} 
 	});
 	return;
@@ -32,18 +32,18 @@ app.custom.formTasks.add('ChangeRequest', null, function (formObj, viewModel) {
 // Add task for Change
 app.custom.formTasks.add('ChangeRequest', "Launch RDP", function (formObj, viewModel) {
 
-    RDP()
+    RDP();
     
 });
 
 function RDP() {
 
-    var CIList = []
+    var CIList = [];
 
     pageForm.viewModel.HasRelatedWorkItems.forEach(function (CI) {
         // If Windows Computer or System Center Managed Computer (Server OS) Class
         if (CI.ClassTypeId == "ea99500d-8d52-fc52-b5a5-10dcd1e9d2bd" || CI.ClassTypeId == "e1ae9104-c9a3-467f-adba-33f801db7d37") {
-            CIList.push({Text: CI.DisplayName, Id: CI.DisplayName})
+            CIList.push({Text: CI.DisplayName, Id: CI.DisplayName});
         }
         else if (typeof(CI.ClassTypeId) == "undefined") { // Must have just been added to the form so we need to get its type
             $.ajax({
@@ -84,10 +84,9 @@ function RDP() {
                     if (pageForm.viewModel.isDirty) {
                         dirty = true;
                         pageForm.viewModel.isDirty = false;
-                        console.log(pageForm.viewModel.isDirty)
                     }
                     // This is the app-launcher call
-                    window.location = 'cireson-app-launcher://launch/rdp?client=' + device
+                    window.location = 'cireson-app-launcher://launch/rdp?client=' + device;
                     if (dirty) {
                         setTimeout(function() {
                             pageForm.viewModel.isDirty = true;
