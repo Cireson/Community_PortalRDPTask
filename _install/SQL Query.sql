@@ -1,0 +1,5 @@
+DELETE FROM DataSource
+WHERE Id = '6D4ED0B1-6555-2A7A-5F25-C0A6295608A7'
+
+INSERT INTO DataSource
+VALUES ('6D4ED0B1-6555-2A7A-5F25-C0A6295608A7', 'Cireson - Query for RDP Task', NULL, 'SELECT ObjectClassId FROM ConfigurationItem WHERE Id = ''{{BaseId}}''' , 1)
