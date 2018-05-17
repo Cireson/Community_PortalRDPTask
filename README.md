@@ -1,6 +1,6 @@
 # Service Manager Portal RDP Task
 
-![RDPTask](/_images/RDPTask.PNG?raw=true "RDP Task")
+![RDPTask](/_images/RDPTask.png?raw=true "RDP Task")
 
 ## Features
 
